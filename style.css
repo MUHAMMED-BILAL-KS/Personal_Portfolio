@@ -1,0 +1,576 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&family=Sofia+Sans+Extra+Condensed&family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Sofia+Sans&family=Sofia+Sans+Extra+Condensed&family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+    font-family: 'Sofia Sans', sans-serif;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+}
+
+nav ul li a{                                                /*  important for underline of menu */
+    color: #fff;                                       
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after{                                           /*  important for underline of menu */
+    content: "";
+    width: 0%;
+    height: 2px;
+    background:yellow;
+    position: absolute;
+    left: 0px;
+    bottom: 1px;
+    transition: 0.3s;
+
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.head-text{
+    margin-top: 47px;
+    margin-left: 290px;
+}
+
+.head-text h1{
+    font-size: 30px;
+}
+
+.head-text h1 span{
+    color: chartreuse;
+}
+
+
+/* ----------------------------------------------ABOUT--------------------------------------------------- */
+
+#about{
+    margin-top: 40px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-1{
+    flex-basis: 35%;
+}
+
+.col-1 img {
+    width: 28vw;
+    border-radius: 15px;
+}
+
+.col-2 {
+    flex-basis: 60%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: chartreuse;
+}
+
+#about-para{
+    font-size: 22px;
+    word-spacing: 2px;
+}
+
+.tab-titles{
+    display: flex;
+    margin-top: 30px;
+}
+
+
+.tab-links{
+    margin-right: 135px;
+    font-size: large;
+    position: relative;
+}
+
+.tab-links::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background:yellow;
+    position: absolute;
+    left: 0px;
+    bottom: 1px;
+    transition: 0.3s;
+}
+
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0px;
+}
+
+.tab-contents ul li span{
+    color: red;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+
+/* -------------------------------------services--------------------------------------------------- */
+
+.services{
+    padding: 30px;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div{
+    background: chartreuse;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300px;
+    border-radius: 15px;
+    transition: background 0.5s,transform 0.5s;
+}
+
+.services-list div i{
+    color: black;
+    font-size: 30px;
+}
+
+.container{
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+.services-list div:hover{
+    background: white;
+    -webkit-text-fill-color: red;
+    transform: translateY(-10px);
+}
+
+.services-list div c1{
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: font-size 0.5s;
+}
+.services-list div c1:hover{
+    -webkit-text-fill-color: black;
+    font-size: xx-large;
+}
+
+/* <!-- -------------------------------------portfolio--------------------------------------------------- --> */
+.work-list2{
+    display: none;
+}
+
+#portfolio{
+    padding: 50px 0;
+
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer p span{
+    color: red;
+}
+
+c img{
+    height: 87%;
+    width: 95%;
+}
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 64px;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 15px;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #ff004f;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background: chartreuse;
+    color: #080808;
+}
+.coming{
+    text-align: center;
+    padding: 80px;
+    animation-name: head1,MB;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+
+/* -------------------------------------------contact-------------------------------------------------- */
+
+
+
+.row.row2{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    margin-right: 15px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: chartreuse;
+    transition: transform 0.5s,color 0.3s;
+    display: inline-block;
+}
+
+.social-icons a:hover{
+    transform: translateY(-5px);
+    color: #fff;
+}
+
+.btn.btn2{
+    color: white;
+}
+
+.btn.btn3{
+    color:black;
+    background-color: chartreuse;
+    font-size: medium;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0px;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+nav .fas{
+    display: none;
+}
+
+#msg{
+    color: chartreuse;
+    margin-top: -30px;
+    display: block;
+}
+
+#portfolio .work.work2{
+    display: none;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+    font-family: 'Solitreo', cursive;
+}
+/* --------------------------------css-for-small-screen------------------------------- */
+
+
+@media only screen and (max-width: 600px){
+    
+.row.row2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+nav .fas{
+    display: block;
+}
+
+nav ul{
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+}
+nav ul li{
+    display: block;
+    margin: 25px;
+}
+
+
+nav ul .fas{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;   
+}
+
+/* ------------------iconMB--------------------- */
+
+#sidebar nav img{
+    width: 100px;
+    margin-left: 0px;
+}
+
+.head-text{
+    padding: 0px;
+    margin-left: 100px;
+}
+.head-text h1{
+    font-size: 20px;
+    margin-left: 0px;
+    padding: 10px;
+
+}
+
+.col-1 img{
+    width: 75vw;
+}
+
+.subtitle{
+    font-size: 40px;
+}
+
+.col-2 p{
+    font-size: 20px;
+    margin-right: 54px;
+}
+
+#about-para{
+    font-size: small;
+    padding: 10px;
+}
+
+.contact-left,.contact-right{
+    flex-basis: 100%;
+}
+
+form .btn{
+    margin-left: 150px;
+}
+
+#contact .btn.btn2{
+    margin-left: 85px;
+}
+
+.work-list .btn{
+    display: none;
+}
+
+#sidebar .container img{
+    height: 10vh;
+    width: 10vw;
+}
+
+/* --------------------------portfolio---------------------------- */
+
+
+.work-list{
+    display: none;
+}
+
+.work-list2{
+    display: block;
+}
+
+.work2 img{
+    height: 35vh;
+}
+
+.layer2{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 180px;
+}
+.layer2 p{
+    text-align: center;
+    font-size: small;
+}
+
+.layer2 h3{
+    font-size: large;
+    text-align: center;
+    text-decoration: solid;
+    animation-name: head1,MB;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.layer2 p span{
+    color: red;
+}
+
+.work2{
+    display: flex;
+    margin: 25px 0;
+    
+    
+}
+
+#sidebar .container img{
+    animation-name: MB;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    background: #080808;
+}
+
+nav ul li a{
+    animation-name: MB2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+}
+
+@keyframes head1{
+    0% {font-size: large;}
+    50% {font-size: small;}
+    100%{font-size: large;}
+}
+
+@keyframes MB{
+    0%{color: violet;}
+    50%{color: red;}
+    100%{color: violet;}
+}
+
+@keyframes MB2{
+    0%{color: white;}
+    50%{color: black;}
+    100%{color: white;}
+}
+

@@ -1,3 +1,0 @@
-https://css-tricks.com/css-animation-libraries/
-http://kristofferandreasen.github.io/wickedCSS/#
-https://animista.net/play/basic

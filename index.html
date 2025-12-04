@@ -1,374 +1,419 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>PORTFOLIO</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="CSS/button.css">
-    <link rel="stylesheet" href="CSS/wicked.css">
-    <link rel="stylesheet" href="CSS/hover.css">
-    <script src="js/button.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohammed Bilal K S - Software Engineer Portfolio. Specialized in C++, WPF, Python, and full-stack development.">
+    <meta name="keywords" content="Software Engineer, C++, WPF, Python, Django, Portfolio, Web Developer">
+    <meta name="author" content="Mohammed Bilal K S">
+    <title>Mohammed Bilal K S | Software Engineer Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/5dd82a64cf.js" crossorigin="anonymous"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
-    <div id="sidebar">
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
         <div class="container">
-            <nav>
-                <m1>MB</m1>
-                <ul id="sidemenu">
-                    <li><a href="#sidebar">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#services">SERVICES</a></li>
-                    <li><a href="#portfolio">PORTFOLIO</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
+            <nav class="nav">
+                <a href="#home" class="nav__logo">MB<span class="logo__dot">.</span></a>
+                
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#professional-projects" class="nav__link">Professional Work</a></li>
+                    <li class="nav__item"><a href="#personal-projects" class="nav__link">Personal Projects</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <i class="fas fa-times nav__close" id="navClose"></i>
                 </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
+                
+                <div class="nav__toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </nav>
-            <div class="head-text">
-                <p>WEB/APP DEVELOPER</p>
-                <h1><b3 class="hvr-float">Hi</b3>,<b3 class="hvr-float">I'm </b3><span><b3 class="hvr-float">Muhammed</b3> <b3 class="hvr-float"></b3><b3 class="hvr-float">Bilal</b3></span><br><b3 class="hvr-float">From</b3> <b3 class="hvr-float">India</b3></h1>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero__content">
+                <p class="hero__greeting">Hi, I'm</p>
+                <h1 class="hero__title">Mohammed Bilal K S</h1>
+                <h2 class="hero__subtitle">Software Engineer</h2>
+                <p class="hero__description">
+                    Specialized in C++ development with 1.5+ years of experience building clean, 
+                    efficient, and maintainable software solutions.
+                </p>
+                <div class="hero__buttons">
+                    <a href="#contact" class="btn btn--primary">Get In Touch</a>
+                    <a href="documents/MohammedBilal.pdf" download class="btn btn--secondary">Download CV</a>
+                </div>
+                <div class="hero__social">
+                    <a href="https://github.com/MUHAMMED-BILAL-KS" target="_blank" class="social__link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohammedbilalks/" target="_blank" class="social__link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:Muhammedbilal367@gmail.com" class="social__link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wtsi.me/918848638439" target="_blank" class="social__link" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-    <script>
+    </section>
 
-        var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
-
-        function closemenu() {
-            sidemenu.style.right = "-800px";
-        }
-
-
-
-    </script>
-
-    <!-- -----------------------------------------ABOUT------------------------------------------------- -->
-    <div id="about">
+    <!-- About Section -->
+    <section class="about section" id="about">
         <div class="container">
-            <div class="row">
-                <div class="col-1">
-                    <img src="pics/mypic1.jpg">
+            <h2 class="section__title">About Me</h2>
+            <div class="about__container">
+                <div class="about__image">
+                    <img src="assets/images/profile.jpg" alt="Mohammed Bilal K S" class="about__img">
                 </div>
-                <div class="col-2">
-                    <h1 class="subtitle floater">ABOUT ME</h1>
-                    <p id="about-para">I Am A Growing Web And App Devoloper Currently Iam Doing My Diploma In Computer
-                        Engineering From Government Polytechnic College Cherthala Alappuzha, And Also I Am Doing BCA From IGNOU,
-                        I Am Improving My Skills In Every Area And I Am Learning More And More Everyday By Self Learning,
-                        Currently I Have Got Many Certificates For Attending Bootcamps.
+                <div class="about__content">
+                    <p class="about__description">
+                        Software Engineer with 1.5+ years of hands-on experience, specializing in C++. 
+                        Skilled in developing clean, efficient, and maintainable code. Proficient in C++, 
+                        Python, C#, WPF, Django, MFC, and OpenGL, with a strong passion for choosing the 
+                        right tools and technologies to solve problems effectively.
                     </p>
-                    <div class="title-content">
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">SKILLS</p>
-                            <p class="tab-links" onclick="opentab('exp')">EXPERIENCE</p>
-                            <p class="tab-links" onclick="opentab('edu')">EDUCATION</p>
+                    <p class="about__description">
+                        Highly motivated to learn and adapt to new languages and frameworks as needed to 
+                        deliver high-quality software solutions in healthcare domain projects.
+                    </p>
+                    
+                    <div class="about__tabs">
+                        <button class="tab__button tab__button--active" data-tab="skills">Skills</button>
+                        <button class="tab__button" data-tab="education">Education</button>
+                    </div>
+                    
+                    <div class="tab__content tab__content--active" id="skills">
+                        <div class="skills__grid">
+                            <div class="skill__category">
+                                <h4 class="skill__category-title">Languages</h4>
+                                <ul class="skill__list">
+                                    <li class="skill__item"><i class="fas fa-code"></i> C++</li>
+                                    <li class="skill__item"><i class="fab fa-python"></i> Python</li>
+                                    <li class="skill__item"><i class="fas fa-code"></i> C#</li>
+                                    <li class="skill__item"><i class="fab fa-java"></i> Java</li>
+                                    <li class="skill__item"><i class="fab fa-js"></i> JavaScript</li>
+                                    <li class="skill__item"><i class="fas fa-database"></i> SQL</li>
+                                </ul>
+                            </div>
+                            <div class="skill__category">
+                                <h4 class="skill__category-title">Frameworks & Tools</h4>
+                                <ul class="skill__list">
+                                    <li class="skill__item"><i class="fab fa-microsoft"></i> WPF</li>
+                                    <li class="skill__item"><i class="fab fa-python"></i> Django</li>
+                                    <li class="skill__item"><i class="fab fa-microsoft"></i> MFC</li>
+                                    <li class="skill__item"><i class="fas fa-cube"></i> OpenGL</li>
+                                    <li class="skill__item"><i class="fab fa-git-alt"></i> Git</li>
+                                    <li class="skill__item"><i class="fas fa-code"></i> Visual Studio</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul style="display: flex;flex-direction: row;justify-content: left;">
-                                <div style="display: flex;flex-direction: column;">
-                                    <li><span><i class="fa-brands fa-python"></span></i> PYTHON</li>
-                                    <li><span><i class="fa-solid fa-code"></span></i>  C</li>
-                                    <li><span><i class="fa-brands fa-java"></span></i> JAVA</li>
-                                    <li><span><i class="fa-brands fa-square-js"></span></i> NODE JS</li>
-                                    <li><span><i class="fa-brands fa-app-store"></span></i> FLUTTER</li>
-                                    <li><span><i class="fa-solid fa-database"></span></i>  MY SQL</li>
-                                </div>
-                                <div style="display: flex;flex-direction: column;margin-left: 8vw;">
-                                    <li><span><i class="fa-brands fa-html5"></span></i> HTML</li>
-                                    <li><span><i class="fa-brands fa-css3-alt"></span></i> CSS</li>
-                                    <li><span><i class="fa-brands fa-bootstrap"></span></i>BOOTSTRAP</li>
-                                    <li><span><i class="fa-brands fa-react"></span></i>REACT AND REACT NATIVE</li>
-                                    <li><span><i class="fa-brands fa-python"></span></i> DJANGO</li>
-                                </div>
-
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="exp">
-                            <ul>
-                                <li>I AM A Fresher, <br><span>But I Have Experience In Doing Projects,</span>
-                                </li>
-                                <li>In PYTHON DJANGO <br><span>I Made A Web App For Face Recognition Attendence System </span>
-                                </li>
-                                <li>In C, <br><span>I Did A Simple Program Model For Bank Operations</span>
-                                </li>
-                                <li>In HTML/CSS/JS, <br><span>I Have Made A Website For Online Medicine Booking</span>
-                                </li>
-                                <li>In JAVA, <br><span>I Made A Code For ColorGame And A Basic Calculater</span>
-                                </li>
-                                <li>In REACT NATIVE, <br><span>I Made An Android App For Student Attendence Marking</span>
-                                </li>
-                                <li>You Can See My Ongoing Projects On My Github Account
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="edu">
-                            <ul>
-
-                                <li><span>SCHOOL</span><br>Completed My Schooling From MPM Thammanam</li>
-                                <li><span>12th</span><br>Completed 11th/12th From Vaduthala Jamath</li>
-                                <li><span>POLYTECHNIC</span><br>Now I am Doing Diploma In Computer Engineering From GPTC
-                                    Cherthala(Last Year)</li>
-                                <li><span>DEGREE</span><br>In This Tight Schedule Of Last Year Diploma Concurrently I Am Also Doing BCA From IGNOU(Currently First Year)</li>
-
-                            </ul>
+                    </div>
+                    
+                    <div class="tab__content" id="education">
+                        <div class="education__list">
+                            <div class="education__item">
+                                <h4 class="education__degree">Bachelor of Computer Application</h4>
+                                <p class="education__school">SH Thevara College</p>
+                                <p class="education__year">2022 – Present</p>
+                            </div>
+                            <div class="education__item">
+                                <h4 class="education__degree">Diploma in Computer Engineering</h4>
+                                <p class="education__school">Government Polytechnic College Cherthala</p>
+                                <p class="education__year">2021 – 2024</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- ------script--------- -->
-
-    <script>
-
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-
-
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-
-    </script>
-
-    <!-- -------------------------------------services--------------------------------------------------- -->
-
-
-    <div id="services">
+    <!-- Experience Section -->
+    <section class="experience section" id="experience">
         <div class="container">
-            <h1 class="subtitle floater">MY SERVICES</h1>
-            <div class="services-list" data-micron="flicker">
-                <div data-micron="tada">
-                    <h2><i class="fa-sharp fa-solid fa-code"></i> Website </h2>
-                    <c1 style="color: chartreuse;">Designing And Hosting Websites</c1>
-                </div>
-                <div data-micron="tada">
-                    <h2><i class="fa-brands fa-app-store-ios"></i> Application </h2>
-                    <c1 style="color: chartreuse;">Devolopment</c1>
+            <h2 class="section__title">Professional Experience</h2>
+            <div class="experience__container">
+                <div class="experience__card">
+                    <div class="experience__header">
+                        <h3 class="experience__title">Software Engineer</h3>
+                        <p class="experience__company">Trenser Technology Solutions</p>
+                        <p class="experience__location">Trivandrum, India</p>
+                        <p class="experience__duration">June 2024 – Present</p>
+                    </div>
+                    <ul class="experience__responsibilities">
+                        <li>Contributed to full software development life-cycle activities across multiple healthcare domain projects</li>
+                        <li>Developed UI components using C# and WPF for medical image viewer applications</li>
+                        <li>Collaborated with cross-functional teams to integrate UI with back-end systems</li>
+                        <li>Translated Python detection algorithms to C++ for performance optimization</li>
+                        <li>Followed MVVM architecture patterns for maintainable and scalable code</li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </section>
 
-    </div>
-
-    <!-- -------------------------------------portfolio--------------------------------------------------- -->
-
-
-    <div id="portfolio">
+    <!-- Professional Projects Section -->
+    <section class="professional-projects section" id="professional-projects">
         <div class="container">
-            <h1 class="subtitle floater">MY WORKS</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="pics/face_django.jpg" height="190vh" width="100%">
-                    <div class="layer">
-                        <h3>Face Recognition Attendence</h3>
-                        <p>Face Recognition Attendence System Using <span>Python Django</span></p>
-                        <a href="https://github.com/MUHAMMED-BILAL-KS/Face_recognition_attendence_system">Read More</a>
+            <h2 class="section__title">Professional Work</h2>
+            <p class="section__subtitle">Projects developed during my professional career</p>
+            
+            <div class="projects__grid">
+                <article class="project__card project__card--professional">
+                    <div class="project__content">
+                        <h3 class="project__title">Neuro Surgery Assist Application</h3>
+                        <p class="project__description">
+                            Designed and developed responsive WPF-based UI components using C#. 
+                            Translated Python-based detection algorithms to C++ for seamless integration 
+                            with the UI. Performed continuous bug fixes and feature enhancements to improve 
+                            application stability and user experience.
+                        </p>
+                        <div class="project__tech">
+                            <span class="tech__tag">C#</span>
+                            <span class="tech__tag">WPF</span>
+                            <span class="tech__tag">C++</span>
+                            <span class="tech__tag">Python</span>
+                        </div>
                     </div>
-                </div>
-                <div class="work">
-                    <img src="pics/attendence_android.jpg" height="190vh">
-                    <div class="layer">
-                        <h3>Student Attendence System For Android</h3>
-                        <p>Its An Android App Made With <span>React Native</span> For Marking Student Attendence Manually</p>
-                        <a href="https://github.com/MUHAMMED-BILAL-KS/Student_attendence_Android">Read More</a>
+                </article>
+                
+                <article class="project__card project__card--professional">
+                    <div class="project__content">
+                        <h3 class="project__title">DICOM Viewer</h3>
+                        <p class="project__description">
+                            Designed and built the application layout and secure login interface using WPF and C#. 
+                            Assisted in developing Software Requirement Specification (SRS) and Software Design 
+                            Specification (SDS) documents. Ensured UI consistency by following MVVM architecture 
+                            and reusable control patterns.
+                        </p>
+                        <div class="project__tech">
+                            <span class="tech__tag">C#</span>
+                            <span class="tech__tag">WPF</span>
+                            <span class="tech__tag">MVVM</span>
+                        </div>
                     </div>
-                </div>
-                <div class="work">
-                    <img src="pics/colorgame.png" height="190vh">
-                    <div class="layer">
-                        <h3>ColorGame</h3>
-                        <p>Color Game Is A Simple Game Created Using <span>JAVA</span> and Mysql It Consist Of Many Colors .The Game Rule Is To Click The Correct Color Within The Given Time</p>
-                        <a href="https://github.com/MUHAMMED-BILAL-KS/java_color_game_version2">Read More</a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="pics/calculater.jpg" height="190vh">
-                    <div class="layer">
-                        <h3>Calculater</h3>
-                        <p>My First Project Calculater Using <span>JAVA</span>, It Can Do Anything A Basic Calculater Can Do</p>
-                        <a href="https://github.com/MUHAMMED-BILAL-KS/PROJECT_CALCULATER">Read More</a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="pics/bank.png" height="190vh">
-                    <div class="layer">
-                        <h3>Bank Operations</h3>
-                        <p>Its A Simple Model Of Transactions In a Bank Using <span>C</span></p>
-                        <a href="#"></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="pics/medicalshop.jfif" height="190vh">
-                    <div class="layer">
-                        <h3>Online Medical Shop</h3>
-                        <p>Its A Simple Online Medicine Store site Using <span>HTML</span></p>
-                        <a href="#"></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <c><img src="pics/portfolio.PNG" height="190vh" width="100%"></c>
-                    <div class="layer">
-                        <h3>Portfolio</h3>
-                        <p>This Portfolio Is Also One Of My Creations Using <span>HTML/CSS/JS</span></p>
-                        <a href="https://github.com/MUHAMMED-BILAL-KS/Personal_Portfolio">Read More</a>
-                    </div>
-                </div>
-                <div class="work">
-                    <h3 class="coming">coming soon</h3>
-                </div>
-            </div>
-
-
-            <!-- ----------------------------work-list for mobiles------------------------------ -->
-
-
-            <div class="work-list2">
-                <div class="work2">
-                    <div class="layer2">
-                        <img src="pics/face_django.jpg" height="190vh">
-                        <h3>Face Recognition</h3>
-                        <p>Face Recognition Attendence System Using <span>Python Django</span></p>
-                        <a href="https://github.com/MUHAMMED-BILAL-KS/Face_recognition_attendence_system">Read More</a>
-                    </div>
-                </div>
-                <div class="work2">
-                    <div class="layer2">
-                        <img src="pics/attendence_android.jpg" height="190vh">
-                        <h3>Student Attendence</h3>
-                        <p>Its An Android App Made With <span>React Native</span> For Marking Student Attendence Manually</p>
-                        <a href="https://github.com/MUHAMMED-BILAL-KS/Student_attendence_Android">Read More</a>
-                    </div>
-                </div>
-                <div class="work2">
-                    <div class="layer2">
-                        <img src="pics/colorgame.png" height="190vh">
-                        <h3>ColorGame</h3>
-                        <p>Color Game Is A Simple Game Created Using <span>JAVA</span></p>
-                        <a href="https://github.com/MUHAMMED-BILAL-KS/java_color_game_version2">Read More</a>
-                    </div>
-                </div>
-                <div class="work2">
-
-                    <div class="layer2">
-                        <img src="pics/calculater.jpg" height="190vh">
-                        <h3>Calculater</h3>
-                        <p>Its A Simple Calculater Using <span>JAVA</span></p>
-                        <a href="https://github.com/MUHAMMED-BILAL-KS/PROJECT_CALCULATER">Read More</a>
-                    </div>
-                </div>
-                <div class="work2">
-
-                    <div class="layer2">
-                        <img src="pics/bank.png" height="190vh">
-                        <h3>Bank Operations</h3>
-                        <p>Its A Simple Model Of Transactions In a Bank Using <span>C</span></p>
-                        <a href="#"></a>
-                    </div>
-                </div>
-                <div class="work2">
-
-                    <div class="layer2">
-                        <img src="pics/medicalshop.jfif" height="190vh">
-                        <h3>Online Medical Shop</h3>
-                        <p>Its A Simple Online Medicine Store site Using <span>HTML</span></p>
-                        <a href="#"></a>
-                    </div>
-                </div>
-                <div class="work2">
-
-                    <div class="layer2">
-                        <c><img src="pics/portfolio.PNG" height="190vh"></c>
-                        <h3>Portfolio</h3>
-                        <p>This Portfolio Is Also One Of My Creations Using <span>HTML/CSS/JS</span></p>
-                        <a href="https://github.com/MUHAMMED-BILAL-KS/Personal_Portfolio">Read More</a>
-                    </div>
-                </div>
-                <div class="work2">
-                    <h3 class="coming">coming soon</h3>
-                </div>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
 
-
-
-
-
-
-    <!-- -------------------------------------------contact-------------------------------------------------- -->
-
-
-
-    <div id="contact">
+    <!-- Personal Projects Section -->
+    <section class="personal-projects section" id="personal-projects">
         <div class="container">
-            <div class="row row3">
-                <div class="contact-left">
-                    <h1 class="subtitle floater">CONTACT ME</h1>
-                    <p><i class="fa-solid fa-envelope"></i>Muhammedbilal367@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>8848638439</p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/mohammedbilalks/"><i
-                                class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://wtsi.me/918848638439"><i class="fa-brands fa-square-whatsapp"></i></a>
-                        <a href="https://github.com/MUHAMMED-BILAL-KS"><i class="fa-brands fa-github"></i></a>
-                        <a href="CV/Resume.pdf" class="btn btn2" download="MuhammedBilal_Resume">Download CV</a>
-                        <!--  add cv link -->
+            <h2 class="section__title">Personal Projects</h2>
+            <p class="section__subtitle">Side projects and learning experiments</p>
+            
+            <div class="projects__grid projects__grid--personal">
+                <article class="project__card">
+                    <div class="project__image">
+                        <img src="assets/images/face-recognition-system.jpg" alt="Face Recognition Attendance System">
+                        <div class="project__overlay">
+                            <a href="https://github.com/MUHAMMED-BILAL-KS/Face_recognition_attendence_system" target="_blank" class="project__link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6"
-                            placeholder="How Is My Portfolio Website Tell Me Your Opinion 😊"></textarea>
-                        <button type="submit" class="btn btn3" data-micron="groove">SUBMIT</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Face Recognition Attendance System</h3>
+                        <p class="project__description">
+                            Web application for automated attendance marking using facial recognition technology.
+                        </p>
+                        <div class="project__tech">
+                            <span class="tech__tag">Python</span>
+                            <span class="tech__tag">Django</span>
+                            <span class="tech__tag">OpenCV</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project__card">
+                    <div class="project__image">
+                        <img src="assets/images/attendance-android-app.jpg" alt="Student Attendance Android App">
+                        <div class="project__overlay">
+                            <a href="https://github.com/MUHAMMED-BILAL-KS/Student_attendence_Android" target="_blank" class="project__link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Student Attendance Android App</h3>
+                        <p class="project__description">
+                            Cross-platform mobile application for manual attendance marking with offline support.
+                        </p>
+                        <div class="project__tech">
+                            <span class="tech__tag">React Native</span>
+                            <span class="tech__tag">JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project__card">
+                    <div class="project__image">
+                        <img src="assets/images/color-game.png" alt="ColorGame">
+                        <div class="project__overlay">
+                            <a href="https://github.com/MUHAMMED-BILAL-KS/java_color_game_version2" target="_blank" class="project__link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">ColorGame</h3>
+                        <p class="project__description">
+                            Interactive game where players must click the correct color within a given time limit.
+                        </p>
+                        <div class="project__tech">
+                            <span class="tech__tag">Java</span>
+                            <span class="tech__tag">MySQL</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project__card">
+                    <div class="project__image">
+                        <img src="assets/images/calculator-app.jpg" alt="Calculator">
+                        <div class="project__overlay">
+                            <a href="https://github.com/MUHAMMED-BILAL-KS/PROJECT_CALCULATER" target="_blank" class="project__link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Calculator Application</h3>
+                        <p class="project__description">
+                            Desktop calculator with all basic arithmetic operations and a clean user interface.
+                        </p>
+                        <div class="project__tech">
+                            <span class="tech__tag">Java</span>
+                            <span class="tech__tag">Swing</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project__card">
+                    <div class="project__image">
+                        <img src="assets/images/bank-operations.png" alt="Bank Operations">
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Bank Operations System</h3>
+                        <p class="project__description">
+                            Console-based banking system simulation with transaction management.
+                        </p>
+                        <div class="project__tech">
+                            <span class="tech__tag">C</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project__card">
+                    <div class="project__image">
+                        <img src="assets/images/medical-shop.jfif" alt="Online Medical Shop">
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Online Medical Shop</h3>
+                        <p class="project__description">
+                            E-commerce website for online medicine ordering and delivery.
+                        </p>
+                        <div class="project__tech">
+                            <span class="tech__tag">HTML</span>
+                            <span class="tech__tag">CSS</span>
+                            <span class="tech__tag">JavaScript</span>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
-        <div class="copyright">
-            Copyright © 2023 . All rights Reserved .<br>Created by Muhammed Bilal
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="section__title">Get In Touch</h2>
+            <p class="section__subtitle">I'm currently open to new opportunities</p>
+            
+            <div class="contact__container">
+                <div class="contact__info">
+                    <h3 class="contact__info-title">Contact Information</h3>
+                    <div class="contact__item">
+                        <i class="fas fa-envelope contact__icon"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:Muhammedbilal367@gmail.com">Muhammedbilal367@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <i class="fas fa-phone contact__icon"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+918848638439">+91 8848638439</a>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <i class="fas fa-map-marker-alt contact__icon"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Ernakulam, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__social">
+                        <a href="https://github.com/MUHAMMED-BILAL-KS" target="_blank" class="social__link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohammedbilalks/" target="_blank" class="social__link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://wtsi.me/918848638439" target="_blank" class="social__link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact__form" id="contactForm">
+                    <div class="form__group">
+                        <input type="text" name="name" class="form__input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" name="email" class="form__input" placeholder="Your Email" required>
+                    </div>
+                    <div class="form__group">
+                        <textarea name="message" class="form__textarea" placeholder="Your Message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+                    <span id="msg" class="form__message"></span>
+                </form>
+            </div>
         </div>
-    </div>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbw0DL5PInbAjEq2HxKYBnZZ7O-dmA5lWWB_33G3_ccUf7Upv-09XxlGx62IV5fqCAgoVA/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">
+                © 2025 Mohammed Bilal K S. All rights reserved.
+            </p>
+        </div>
+    </footer>
 
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message Send Successfully"
-                    setTimeout(function () {
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
-
-
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
-
 </html>

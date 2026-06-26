@@ -618,6 +618,29 @@ button {
     flex: 1;
 }
 
+.project__bullet-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    flex: 1;
+}
+
+.project__bullet-list li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.25rem;
+}
+
+.project__bullet-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
 .project__tech {
     display: flex;
     flex-wrap: wrap;
